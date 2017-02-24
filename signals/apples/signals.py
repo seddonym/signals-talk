@@ -1,4 +1,5 @@
 from django.dispatch import Signal
 
 
-my_signal = Signal(providing_args=["foo", "bar"])
+# Signal sent when an apple is eaten
+apple_eaten = Signal(providing_args=['bites'])

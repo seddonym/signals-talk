@@ -1,7 +1,13 @@
 from django.dispatch import receiver
-from apples.signals import my_signal
+from apples.signals import apple_eaten
+from apples.models import Bramley
 
 
-@receiver(my_signal)
-def my_receiver(sender, foo, bar, **kwargs):
-    print("Received with foo='{foo}' and bar='{bar}'.".format(foo=foo, bar=bar))
+@receiver(apple_eaten)
+def apple_eaten_receiver(sender, bites, **kwargs):
+    print("Apple eaten in {} bite(s).".format(bites))
+
+
+@receiver(apple_eaten, sender=Bramley)
+def bramley_eaten_receiver(sender, bites, **kwargs):
+    print("Bramley eaten in {} bite(s).".format(bites))
