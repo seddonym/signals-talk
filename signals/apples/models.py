@@ -6,7 +6,7 @@ class Apple:
         """Eats the apple.
         """
         # Dispatch signal
-        apple_eaten.send(self.__class__, bites=1)
+        apple_eaten.send(self.__class__, bites=5)
             
     def eat_carefully(self):
         """Eats the apple carefully.

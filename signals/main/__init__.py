@@ -8,6 +8,6 @@ class AppConfig(BaseAppConfig):
     def ready(self):
         # Automatically import all receivers files
         autodiscover_modules('receivers')
-
+        
 
 default_app_config = 'main.AppConfig'
