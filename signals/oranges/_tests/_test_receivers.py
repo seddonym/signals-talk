@@ -38,4 +38,4 @@ class TestReceivers(TestCase):
         
     def test_mute_signals(self):
         # Todo
-        
+        pass
